@@ -3,8 +3,8 @@
       <h1>Matheus Vitor</h1>
       <ul>
         <NavItem content="Início" href="/" />
+        <NavItem content="Sobre" href="/sobre" />
         <NavItem content="Blog" href="/blog" />
-        <NavItem content="Contato" href="#contato" />
       </ul>
     </nav>
   </template>
