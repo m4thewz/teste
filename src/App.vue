@@ -24,19 +24,19 @@ export default {
 
 #app {
   font-family: "Poppins", sans-serif;
-  background-color: #18181b;
-  color: white;
+  background-color: $bg;
+  color: $text;
 }
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #008dff;
+  background: $primary;
   border-radius: 30px;
 }
 ::-webkit-scrollbar-track {
-  background: #18181b;
+  background: $bg;
   box-shadow: inset 0px 0px 0px 0px #f0f0f0;
 }
 </style>

@@ -10,7 +10,7 @@ nav {
   
     h1 {
       font-size: 3.25rem;
-      color: #008dff;
+      color: white;
     }
     ul {
       display: flex;
@@ -28,10 +28,10 @@ nav {
   
           transition: all ease .5s;
           &.router-link-exact-active {
-            color: #00a2ff;
+            color: $primary;
           }
           &:not(.router-link-exact-active):hover {
-            color: #008dff;
+            color: $secondary;
           }
         }
       }
