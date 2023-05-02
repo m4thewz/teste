@@ -21,7 +21,9 @@ export default {
 
   box-sizing: border-box;
 }
-
+body {
+  background-color: $bg;
+}
 #app {
   font-family: "Poppins", sans-serif;
   background-color: $bg;

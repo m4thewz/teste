@@ -1,10 +1,13 @@
 <template>
-    <nav>
-      <h1>Matheus Vitor</h1>
+    <nav :class="closed ? 'closed' : ''">
+      <div>
+        <h1>Matheus Vitor</h1>
+        <img src="@/assets/menu.svg" alt="Menu" @click="closed = !closed">
+      </div>
       <ul>
-        <NavItem content="Início" href="/" />
-        <NavItem content="Sobre" href="/sobre" />
-        <NavItem content="Blog" href="/blog" />
+          <NavItem content="Início" href="/" />
+          <NavItem content="Sobre" href="/sobre" />
+          <NavItem content="Blog" href="/blog" />
       </ul>
     </nav>
   </template>
@@ -15,6 +18,11 @@
   export default {
     name: "Navbar",
     components: { NavItem },
+    data() {
+      return {
+        closed: true
+      }
+    },
   };
   </script>
   

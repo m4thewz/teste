@@ -1,51 +1,87 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
 
-    padding: 2rem 2.5rem;
-    font-weight: bold;
-  
-    h1 {
-      font-size: 3.25rem;
-      color: white;
-    }
-    ul {
-      display: flex;
-      gap: 1em;
-      align-items: center;
-  
-      font-family: 'Josefin Sans', sans-serif;
-      list-style-type: none;
-  
-      li {
-        a {
-          font-size: 1.9em;
-          color: inherit;
-          text-decoration: none;
-  
-          transition: all ease .5s;
-          &.router-link-exact-active {
-            color: $primary;
-          }
-          &:not(.router-link-exact-active):hover {
-            color: $secondary;
-          }
+  padding: 2rem 2.5rem;
+  font-weight: bold;
+
+  h1 {
+    font-size: 3.25rem;
+    color: white;
+  }
+  ul {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    font-family: 'Josefin Sans', sans-serif;
+    list-style-type: none;
+
+    li {
+      a {
+        font-size: 1.9em;
+        color: inherit;
+        text-decoration: none;
+
+        transition: all ease .5s;
+        &.router-link-exact-active {
+          color: $primary;
+        }
+        &:not(.router-link-exact-active):hover {
+          color: $secondary;
         }
       }
     }
   }
-  
-  @media screen and (max-width: 650px) {
-    nav {
-      padding: 15px 20px;
-      justify-content: center;
-  
-      ul {
-        display: none;
+  div img {
+    width: 50px;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  nav.closed{
+    padding-bottom: 1em;
+    ul {
+      display: none;
+    }
+  }
+  nav {
+    padding-top: 1em;
+
+    border-bottom: 1px solid $primary;
+    background-color: $bg;
+
+    &, ul {
+      align-items: normal;
+      flex-direction: column;
+    }
+    ul {
+      display: flex;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        display: block;
       }
     }
   }
-  
+}
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  nav {
+    h1 {
+      font-size: 2em;
+    }
+    ul {
+      margin-top: .7em;
+      li a{
+        font-size: 1.5em !important;
+      }
+    }
+  }
+}
